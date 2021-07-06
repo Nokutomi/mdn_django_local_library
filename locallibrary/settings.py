@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     '192.168.5.179', # Adicionado para servir a página no IP-Local
     'localhost',
     '127.0.0.1',
+    'fierce-eyrie-71565.herokuapp.com',
 ]
 
 
@@ -156,3 +157,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
 
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
